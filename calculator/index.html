@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link href="./index.css" type="text/css" rel="stylesheet">
+    <title>계산기</title>
+</head>
+<body>
+    <!-- result -->
+    <div id="main">
+        <div id="header">
+            <span id="title">계산기</span>
+            <span id="c" onclick="fn_reset()">C</span> <!-- 초기화 -->
+        </div>
+        <div id="window"></div> <!-- 입력창 & 결과창 -->
+        <div id="keyPad"> <!-- 숫자 키패드 -->
+            <div class="box" onclick="fn_number('7')">7</div>
+            <div class="box" onclick="fn_number('8')">8</div>
+            <div class="box boxMarginInit" onclick="fn_number('9')">9</div>
+            <div class="box" onclick="fn_number('4')">4</div>
+            <div class="box" onclick="fn_number('5')">5</div>
+            <div class="box boxMarginInit" onclick="fn_number('6')">6</div>
+            <div class="box" onclick="fn_number('1')">1</div>
+            <div class="box" onclick="fn_number('2')">2</div>
+            <div class="box boxMarginInit" onclick="fn_number('3')">3</div>
+        </div>
+        <div id="math">
+            <div class="box boxMarginInit" onclick="fn_number('0')">0</div>
+            <div id="result" onclick="fn_cal()">=</div> <!-- 계산 -->
+        </div>
+        <div id="operatorPad"> <!-- 연산부호 버튼 -->
+            <div class="box operatorBoxMarginInit" onclick="fn_number('+')">+</div>
+            <div class="box operatorBoxMarginInit" onclick="fn_number('-')">-</div>
+            <div class="box operatorBoxMarginInit" onclick="fn_number('*')">*</div>
+            <div class="box operatorBoxMarginInit" onclick="fn_number('/')">/</div>
+            <div class="box operatorBoxMarginInit" onclick="fn_number('%')">%</div>
+        </div>
+    </div>
+<!-- JQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+<script src="./index.js"></script>
+</body>
